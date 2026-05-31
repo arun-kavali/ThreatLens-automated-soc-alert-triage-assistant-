@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ThreatLens Design System - Green/Teal SOC Theme */
+
+@layer base {
+  :root {
+    /* Light SOC theme for authenticated pages */
+    --background: 0 0% 98%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Primary: Teal/Green for CTAs and highlights */
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 10% 94%;
+    --secondary-foreground: 220 20% 15%;
+
+    --muted: 220 10% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 160 60% 94%;
+    --accent-foreground: 160 84% 30%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 10% 88%;
+    --input: 220 10% 94%;
+    --ring: 160 84% 39%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar - Light panel with teal accent */
+    --sidebar-background: 160 30% 97%;
+    --sidebar-foreground: 220 20% 25%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 40% 92%;
+    --sidebar-accent-foreground: 160 84% 25%;
+    --sidebar-border: 160 20% 88%;
+    --sidebar-ring: 160 84% 39%;
+
+    /* Custom SOC colors */
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 20% 10%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* Severity colors */
+    --severity-critical: 0 72% 51%;
+    --severity-high: 25 95% 53%;
+    --severity-medium: 38 92% 50%;
+    --severity-low: 160 84% 39%;
+
+    /* Gradient for auth panel */
+    --gradient-start: 160 84% 30%;
+    --gradient-end: 180 70% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .gradient-brand {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(180 70% 45%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+}

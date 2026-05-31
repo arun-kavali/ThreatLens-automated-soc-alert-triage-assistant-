@@ -1,0 +1,13 @@
+project_id = "ptohzzgcexxwuxukjiuz"
+
+[functions.process-alerts]
+verify_jwt = false
+
+[functions.analyze-alert]
+verify_jwt = false
+
+[functions.health-summary]
+verify_jwt = false
+
+[functions.generate-incident-summary]
+verify_jwt = false
