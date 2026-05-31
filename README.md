@@ -1,188 +1,327 @@
-🚨 ThreatLens
-AI-Powered SOC Alert Triage & Incident Intelligence Platform
+# 🚨 ThreatLens – AI-Powered SOC Alert Triage & Incident Intelligence Platform
 
-🔗 Live Demo:
-👉 https://threat-lens-automated-soc-alert-triage-assistant.vercel.app/
+## 🔗 Live Demo
 
-🔍 What is ThreatLens?
+**ThreatLens:** https://threatlens-automated-soc.vercel.app/
 
-ThreatLens is an AI-powered Security Operations Center (SOC) application that automatically analyzes security alerts, correlates real threats into incidents, and provides clear, actionable investigation intelligence to SOC analysts.
+---
 
-It simulates a real-world SOC workflow using AI and backend automation to reduce alert fatigue and speed up incident response.
+## 📌 Overview
 
-❗ Problem Statement
+ThreatLens is an AI-powered Security Operations Center (SOC) platform designed to automate alert triage, incident correlation, and security investigation workflows.
 
-SOC analysts today face:
+The platform simulates real-world SOC operations by ingesting security alerts, analyzing them with AI, automatically correlating related events into incidents, and providing actionable investigation intelligence to security analysts.
 
-Thousands of alerts every day
+Its primary goal is to reduce alert fatigue, accelerate incident response, and improve analyst productivity through intelligent automation.
 
-High false-positive rates
+---
 
-Manual alert triage
+## ❗ Problem Statement
 
-Delayed incident response
+Modern Security Operations Centers face several challenges:
 
-Complex and noisy SIEM/SOAR tools
+* Thousands of alerts generated daily
+* High false-positive rates
+* Time-consuming manual alert triage
+* Delayed incident response
+* Complex SIEM and SOAR workflows
+* Difficulty identifying real threats among noisy alerts
 
-⚠️ Result: Real threats are often missed or detected too late.
+As a result, critical security incidents can be missed or detected too late.
 
-💡 Solution Overview
+---
 
-ThreatLens solves this by:
+## 💡 Solution
 
-Automatically ingesting security alerts
+ThreatLens addresses these challenges through:
 
-Using AI to explain what happened, why it’s risky, and what to do next
+* Automated alert ingestion
+* AI-driven alert analysis
+* Risk scoring and severity classification
+* Automatic incident correlation
+* AI-generated investigation intelligence
+* Real-time SOC dashboard monitoring
+* Incident lifecycle management
 
-Correlating related alerts into incidents automatically
+The platform enables analysts to focus on real threats instead of manually processing large volumes of alerts.
 
-Guiding analysts with AI-generated incident intelligence
+---
 
-Clearly separating Alert Sources from SOC Analysts
+## 🔄 System Workflow
 
-🔄 Application Workflow
+### 1. Alert Generation
 
-Alert Source injects security alerts (demo simulation)
+Security alerts are generated through simulated alert sources.
 
-Alerts are stored in the backend database
+### 2. Alert Ingestion
 
-AI analyzes each alert and assigns risk & severity
+Alerts are stored in the backend database.
 
-Backend automatically correlates related alerts
+### 3. AI Analysis
 
-An incident is created without manual action
+Each alert is analyzed using AI to determine:
 
-SOC Analyst opens the incident
+* Threat context
+* Risk score
+* Severity level
+* Investigation priority
 
-On Start Investigation, AI provides:
+### 4. Alert Correlation
 
-Attack pattern
+Related alerts are automatically grouped together.
 
-Business impact
+### 5. Incident Creation
 
-Priority level
+ThreatLens creates incidents automatically without manual intervention.
 
-Containment steps
+### 6. Investigation
 
-Analyst recommendations
+SOC Analysts can start investigations and receive AI-generated intelligence including:
 
-Analyst takes action and resolves the incident
+* Attack patterns
+* Business impact assessment
+* Priority level
+* Containment recommendations
+* Analyst actions
 
-Dashboard metrics update in real time
+### 7. Resolution
 
-👥 User Roles & Access
-🔹 Alert Source
-
-Can generate / inject security alerts
-
-Used only for alert creation (simulated sources)
-
-Cannot view alerts, incidents, or dashboards
-
-🔹 SOC Analyst
-
-Views alerts and incidents
-
-Investigates incidents using AI intelligence
-
-Takes containment actions
-
-Resolves incidents
-
-🚫 No Admin Role
-🚫 No manual correlation button
-
-✨ Key Features
-
-Automated alert ingestion (demo-based)
-
-AI-powered alert analysis
-
-Risk scoring (0–100)
-
-Automatic alert correlation into incidents
-
-AI Incident Intelligence:
-
-Attack pattern
-
-Business impact
-
-Priority level
-
-Containment steps
-
-Analyst recommendations
-
-Real-time SOC dashboard
-
-Incident lifecycle tracking:
+Incidents progress through:
 
 Open → In Progress → Resolved
 
-Role-based authentication
+### 8. Dashboard Updates
 
-Rule-based fallback if AI is unavailable
+Security metrics update in real time.
 
-🛠️ Technology Stack
-Frontend
+---
 
-React
+## 👥 User Roles
 
-Tailwind CSS
+### Alert Source
 
-Vite
+Responsibilities:
 
-Backend
+* Generate security alerts
+* Inject alerts into the platform
 
-Supabase (Database, Auth, Realtime, Edge Functions)
+Restrictions:
 
-AI
+* Cannot access alerts
+* Cannot access incidents
+* Cannot access dashboard analytics
 
-OpenAI API
+---
 
-Automation
+### SOC Analyst
 
-Backend correlation logic
+Responsibilities:
 
-Cron-based scheduled processing
+* View alerts
+* Monitor incidents
+* Investigate incidents
+* Resolve incidents
+* Access dashboard metrics
 
-Deployment
+---
 
-Vercel
+## ✨ Key Features
 
-🧪 Demo Highlights
+### AI-Powered Alert Analysis
 
-Generate realistic alerts (phishing, brute force, malware)
+* Threat explanation
+* Risk scoring
+* Severity classification
+* Context-aware analysis
 
-Watch AI analyze alerts automatically
+### Automated Incident Correlation
 
-See incidents auto-created (no button)
+* Detects related alerts
+* Groups alerts into incidents
+* Eliminates manual correlation
 
-Start investigation to view AI incident intelligence
+### AI Incident Intelligence
 
-Resolve incidents and observe live metric updates
+Provides:
 
-📊 Results & Outcome
+* Attack pattern analysis
+* Business impact assessment
+* Priority recommendations
+* Containment strategies
+* Investigation guidance
 
-Reduced alert noise
+### Real-Time Dashboard
 
-Faster incident identification
+Track:
 
-Improved SOC analyst efficiency
+* Total alerts
+* Active incidents
+* Resolved incidents
+* Severity distribution
+* Investigation status
 
-Explainable AI-driven decisions
+### Incident Lifecycle Management
 
-Realistic SOC workflow demonstration
+Supports:
 
-🚀 Future Enhancements
+* Open
+* In Progress
+* Resolved
 
-Integration with real SIEM and EDR platforms
+### Authentication & Authorization
 
-Automated SOAR-style response execution
+* Secure authentication
+* Role-based access control
+* Protected routes
 
-Threat intelligence feed enrichment
+### Fallback Processing
 
-Advanced analytics and compliance reporting
+When AI services are unavailable:
 
-Enterprise-scale deployment support
+* Rule-based risk scoring
+* Rule-based severity assignment
+* Automated incident summaries
+
+---
+
+## 🏗️ Technology Stack
+
+### Frontend
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+
+### Backend
+
+* Supabase Database
+* Supabase Authentication
+* Supabase Realtime
+* Supabase Edge Functions
+
+### Artificial Intelligence
+
+* OpenAI API
+
+### Automation
+
+* Incident Correlation Engine
+* Scheduled Processing Jobs
+* Backend Automation Workflows
+
+### Deployment
+
+* Vercel
+
+---
+
+## 📊 Platform Capabilities
+
+### Security Alert Types
+
+ThreatLens can simulate and process:
+
+* Phishing Alerts
+* Malware Detection
+* Brute Force Attempts
+* Suspicious Logins
+* Credential Abuse
+* Unauthorized Access Attempts
+
+### Incident Intelligence
+
+For every incident, ThreatLens can generate:
+
+* Threat Summary
+* Attack Chain Analysis
+* Business Risk Assessment
+* Recommended Actions
+* Containment Procedures
+
+---
+
+## 🚀 Getting Started
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+cd threatlens
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Configure Environment Variables
+
+```env
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
+OPENAI_API_KEY=
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+### Build Production Version
+
+```bash
+npm run build
+```
+
+### Deploy
+
+```bash
+vercel --prod
+```
+
+---
+
+## 📈 Expected Outcomes
+
+ThreatLens helps organizations:
+
+* Reduce alert fatigue
+* Accelerate incident response
+* Improve analyst efficiency
+* Increase threat visibility
+* Standardize investigation workflows
+* Demonstrate modern AI-driven SOC operations
+
+---
+
+## 🔮 Future Enhancements
+
+Planned improvements include:
+
+* SIEM Integration
+* EDR Integration
+* SOAR Automation
+* Threat Intelligence Feed Enrichment
+* Compliance Reporting
+* Advanced Security Analytics
+* Multi-Tenant Enterprise Support
+* Automated Response Playbooks
+
+---
+
+## 👨‍💻 Author
+
+**Arun Kavali**
+
+AI-Powered Cybersecurity & Security Operations Project
+
+---
+
+## ⭐ Project Vision
+
+ThreatLens demonstrates how Artificial Intelligence can enhance Security Operations Centers by automating repetitive tasks, reducing alert fatigue, and enabling analysts to focus on high-priority threats.
+
+The project showcases the future of intelligent security operations through explainable AI and automated incident response workflows.
